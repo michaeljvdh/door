@@ -15,27 +15,38 @@
 			<link rel="stylesheet" type="text/css" href="css/styleIE.css" />
 		<![endif]-->
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
-        
-
-
     </head>
 
     <body style="background-image: url(images/pattern.png), url(images/5.jpg);">
-
-        
+       
             <h1><span></span></h1>
             
              <div style="position:fixed;top:50%;bottom:50%;"  >
                 <ul class="bmenu">
             
-                    <li><a href="http://www.parkplaceproductions.ca">&nbsp&nbspUnique</a></li>
-                    <li><a href="http://www.parkplaceproductions.ca">&nbsp&nbspOriginal</a></li>
-                    <li><a href="http://www.parkplaceproductions.ca">&nbsp&nbspExperienced</a></li>
-                    <li><a href="http://www.parkplaceproductions.ca">&nbsp&nbspEvent Productions</a></li>
+                    <li><a href="http://www.parkplaceproductions.ca">&nbsp;&nbsp;Unique</a></li>
+                    <li><a href="http://www.parkplaceproductions.ca">&nbsp;&nbsp;Original</a></li>
+                    <li><a href="http://www.parkplaceproductions.ca">&nbsp;&nbsp;Experienced</a></li>
+                    <li><a href="http://www.parkplaceproductions.ca">&nbsp;&nbsp;Event Productions</a></li>
                </ul>
                 
             </div>
 
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function() {
+            var delay = 2000; // in milliseconds
+
+            $("ul a").click(function(event) {
+                event.preventDefault();
+
+                $('body').fadeOut(delay, function() {
+                    // this will be called after a fade out
+                    window.location.href = event.target.href;
+                });
+            });
+        });
+    </script>
 
     </body>
 </html>
